@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FreshBite</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-text">FreshBite</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Our Meals</a></li>
+                <li><a href="subscription.html">Subscription</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="btn-account">Account</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you. Questions, feedback, or just want to say hi?</p>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@freshbite.com">hello@freshbite.com</a></p>
+                    <p class="meta">Response time: 2 hours</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:1-800-FRESHBITE">1-800-FRESHBITE</a></p>
+                    <p class="meta">Mon-Fri: 9 AM - 8 PM EST</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Address</h3>
+                    <p>123 Farm Road, Portland, OR 97205</p>
+                    <p class="meta">Headquarters & Kitchen</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p><a href="#" onclick="alert('Chat feature will open')">Start Chat</a></p>
+                    <p class="meta">Available 24/7 for members</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Send us a Message</h2>
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic</option>
+                        <option value="billing">Billing Question</option>
+                        <option value="delivery">Delivery Issue</option>
+                        <option value="quality">Quality Feedback</option>
+                        <option value="partnership">Partnership Inquiry</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Tell us what's on your mind..."></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe" checked>
+                    <label for="subscribe">Subscribe to our newsletter for offers and updates</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Support Resources -->
+    <section class="support-resources">
+        <h2>Help & Support</h2>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h3>❓ FAQ</h3>
+                <p>Find answers to common questions about subscriptions, delivery, and meals</p>
+                <a href="#" class="resource-link">Browse FAQs →</a>
+            </div>
+            <div class="resource-card">
+                <h3>🚚 Tracking Orders</h3>
+                <p>Track your current order and see estimated delivery times</p>
+                <a href="#" class="resource-link">Track Order →</a>
+            </div>
+            <div class="resource-card">
+                <h3>💳 Account & Billing</h3>
+                <p>Manage your subscription, payment methods, and account settings</p>
+                <a href="account.html" class="resource-link">Go to Account →</a>
+            </div>
+            <div class="resource-card">
+                <h3>🍽️ Recipes & Tips</h3>
+                <p>Learn how to reheat meals perfectly and get recipe ideas</p>
+                <a href="#" class="resource-link">View Resources →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-contact">
+        <h2>Follow Us</h2>
+        <p>Connect with us on social media for recipes, updates, and community stories</p>
+        <div class="social-grid">
+            <a href="#" class="social-card">
+                <span class="social-icon">📱</span>
+                <span>Instagram</span>
+                <span class="handle">@freshbite</span>
+            </a>
+            <a href="#" class="social-card">
+                <span class="social-icon">👥</span>
+                <span>Facebook</span>
+                <span class="handle">@freshbite</span>
+            </a>
+            <a href="#" class="social-card">
+                <span class="social-icon">🐦</span>
+                <span>Twitter/X</span>
+                <span class="handle">@freshbiteofficial</span>
+            </a>
+            <a href="#" class="social-card">
+                <span class="social-icon">📺</span>
+                <span>TikTok</span>
+                <span class="handle">@freshbite</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Visit Us</h2>
+        <div class="map-container">
+            <iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.6936408906244!2d-122.68544!3d45.51499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a08e7b5d6fd%3A0x123456789abcdef!2s123%20Farm%20Road%2C%20Portland%2C%20OR%2097205!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🍽️ FreshBite</h4>
+                <p>Premium meal subscriptions for a healthier you</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Meals</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#refund">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📱 Instagram</a>
+                    <a href="#">👥 Facebook</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FreshBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        alert(`Thank you, ${name}! Your message has been sent. We'll get back to you within 2 hours.`);
+        document.querySelector('.contact-form').reset();
+    }
+    </script>
+</body>
+</html>
