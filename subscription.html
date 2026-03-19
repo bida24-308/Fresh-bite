@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans - FreshBite</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-text">FreshBite</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">Our Meals</a></li>
+                <li><a href="subscription.html" class="active">Subscription</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="account.html" class="btn-account">Account</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Choose Your Perfect Plan</h1>
+        <p>Flexible subscriptions tailored to your lifestyle</p>
+    </section>
+
+    <!-- Billing Toggle -->
+    <section class="billing-toggle">
+        <button class="toggle-btn active" data-billing="monthly">Monthly Billing</button>
+        <button class="toggle-btn" data-billing="quarterly">Quarterly (+10% Savings)</button>
+        <button class="toggle-btn" data-billing="yearly">Yearly (+20% Savings)</button>
+    </section>
+
+    <!-- Subscription Plans -->
+    <section class="subscription-plans">
+        <div class="plans-container">
+            <!-- Casual Plan -->
+            <div class="plan-card plan-casual">
+                <h3>Casual</h3>
+                <p class="plan-subtitle">Perfect for trying us out</p>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount" data-monthly="49" data-quarterly="44.1" data-yearly="39.2">49</span>
+                    <span class="period">/week</span>
+                </div>
+                <div class="plan-description">
+                    <p>Great for individuals exploring meal prep</p>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ 2 meals per week</li>
+                    <li>✓ 2 servings each</li>
+                    <li>✓ Free delivery</li>
+                    <li>✓ Menu preview</li>
+                    <li>✗ Meal planning help</li>
+                    <li>✗ Priority support</li>
+                    <li>✗ Nutritionist consultation</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Get Started</a>
+                <p class="plan-note">Cancel anytime</p>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="plan-card plan-premium featured">
+                <span class="best-value-badge">BEST VALUE</span>
+                <h3>Premium</h3>
+                <p class="plan-subtitle">Most popular choice</p>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount" data-monthly="99" data-quarterly="89.1" data-yearly="79.2">99</span>
+                    <span class="period">/week</span>
+                </div>
+                <div class="plan-description">
+                    <p>Perfect for families and health enthusiasts</p>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ 5 meals per week</li>
+                    <li>✓ 2 servings each</li>
+                    <li>✓ Free delivery</li>
+                    <li>✓ Menu preview</li>
+                    <li>✓ Weekly meal planning</li>
+                    <li>✓ Priority support</li>
+                    <li>✗ Personal nutritionist</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Get Started</a>
+                <p class="plan-note">Cancel anytime</p>
+            </div>
+
+            <!-- Elite Plan -->
+            <div class="plan-card plan-elite">
+                <h3>Elite</h3>
+                <p class="plan-subtitle">Maximum benefits</p>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount" data-monthly="149" data-quarterly="134.1" data-yearly="119.2">149</span>
+                    <span class="period">/week</span>
+                </div>
+                <div class="plan-description">
+                    <p>For serious fitness enthusiasts and busy professionals</p>
+                </div>
+                <ul class="plan-features">
+                    <li>✓ 7 meals per week</li>
+                    <li>✓ 3 servings each</li>
+                    <li>✓ Priority delivery</li>
+                    <li>✓ Advanced menu preview</li>
+                    <li>✓ Personalized meal planning</li>
+                    <li>✓ 24/7 priority support</li>
+                    <li>✓ Personal nutritionist consultation</li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Get Started</a>
+                <p class="plan-note">Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <h2>Plan Comparison</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Casual</th>
+                    <th>Premium</th>
+                    <th>Elite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Meals per week</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Servings per meal</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Free delivery</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>✓ Priority</td>
+                </tr>
+                <tr>
+                    <td>Dietary preferences</td>
+                    <td>Basic selection</td>
+                    <td>Full selection</td>
+                    <td>Full + custom requests</td>
+                </tr>
+                <tr>
+                    <td>Weekly meal planning</td>
+                    <td>–</td>
+                    <td>✓</td>
+                    <td>✓ Personalized</td>
+                </tr>
+                <tr>
+                    <td>Menu preview</td>
+                    <td>✓</td>
+                    <td>✓</td>
+                    <td>✓ Advanced</td>
+                </tr>
+                <tr>
+                    <td>Customer support</td>
+                    <td>Standard email</td>
+                    <td>✓ Priority</td>
+                    <td>✓ 24/7 Phone & Email</td>
+                </tr>
+                <tr>
+                    <td>Nutritionist access</td>
+                    <td>–</td>
+                    <td>–</td>
+                    <td>✓ Monthly consultation</td>
+                </tr>
+                <tr>
+                    <td>Skips per month</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Referral bonus</td>
+                    <td>$10</td>
+                    <td>$25</td>
+                    <td>$50</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Customization Section -->
+    <section class="customization">
+        <h2>Customize Your Subscription</h2>
+        <div class="customization-grid">
+            <div class="customization-card">
+                <h4>🌱 Dietary Preferences</h4>
+                <p>Select from vegan, vegetarian, keto, gluten-free, paleo, and more. Mix and match meals based on your lifestyle.</p>
+            </div>
+            <div class="customization-card">
+                <h4>🔄 Flexible Scheduling</h4>
+                <p>Pause, skip, or modify your subscription anytime. No long-term commitment required.</p>
+            </div>
+            <div class="customization-card">
+                <h4>🎯 Calorie Targets</h4>
+                <p>Choose meals that fit your daily calorie goals. Options from 1200-2500+ calories available.</p>
+            </div>
+            <div class="customization-card">
+                <h4>🚫 Allergy Management</h4>
+                <p>Specify allergies and intolerances. We'll exclude them from all meal suggestions.</p>
+            </div>
+            <div class="customization-card">
+                <h4>🍽️ Cuisine Preferences</h4>
+                <p>Pick your favorite cuisines and languages. We'll customize your menu accordingly.</p>
+            </div>
+            <div class="customization-card">
+                <h4>📊 Nutrition Tracking</h4>
+                <p>Each meal comes with detailed macro and micronutrient information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Common Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>Can I pause my subscription?</h4>
+                <p>Yes! You can pause for up to 8 weeks without any penalties. Just manage it in your account settings.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How does delivery work?</h4>
+                <p>We deliver every week on your chosen day. All meals arrive in insulated packaging to ensure freshness.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I change my plan?</h4>
+                <p>Absolutely. Upgrade or downgrade anytime. Changes take effect in your next billing cycle.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What if I don't like a meal?</h4>
+                <p>We offer meal swaps instantly through your account. No questions asked if you want something different.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you offer gift subscriptions?</h4>
+                <p>Yes! Give the gift of healthy eating. Choose any plan and duration for your loved ones.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is there a minimum commitment?</h4>
+                <p>No minimum commitment at all. Cancel your subscription anytime with no fees or penalties.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Start Your Free Trial</h2>
+        <p>Get your first week at 50% off when you sign up today</p>
+        <a href="account.html" class="btn btn-primary">Create Account</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🍽️ FreshBite</h4>
+                <p>Premium meal subscriptions for a healthier you</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="products.html">Meals</a></li>
+                    <li><a href="subscription.html">Subscription</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#refund">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">📱 Instagram</a>
+                    <a href="#">👥 Facebook</a>
+                    <a href="#">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 FreshBite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/subscription.js"></script>
+</body>
+</html>
