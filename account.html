@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<nav>
+    <h2>FreshBite</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Meals</a></li>
+        <li><a href="subscription.html">Subscription</a></li>
+        <li><a href="account.html">Account</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Account</h1>
+
+    <!-- LOGIN FORM -->
+    <div id="loginBox">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button class="btn" onclick="login()">Login</button>
+    </div>
+
+    <!-- USER INFO -->
+    <div id="userBox" style="display:none;">
+        <h2>Welcome, <span id="userNameDisplay"></span> 👋</h2>
+        <button class="btn" onclick="logout()">Logout</button>
+    </div>
+</section>
+
+</body>
+<script src="main.js"></script>
+</html>
