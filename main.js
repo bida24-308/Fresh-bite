@@ -80,3 +80,26 @@ function openPopup() {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
+
+let selectedMeals = [];
+
+function selectMeal(mealName, element) {
+    if (selectedMeals.includes(mealName)) {
+        selectedMeals = selectedMeals.filter(m => m !== mealName);
+        element.classList.remove("selected");
+    } else {
+        selectedMeals.push(mealName);
+        element.classList.add("selected");
+    }
+
+    localStorage.setItem("meals", JSON.stringify(selectedMeals));
+}
+
+function goToSubscription() {
+    if (selectedMeals.length === 0) {
+        alert("Select at least one meal");
+        return;
+    }
+
+    location.href = "subscription.html";
+}
