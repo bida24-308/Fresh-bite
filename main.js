@@ -1,12 +1,4 @@
-function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-    
-// LOGIN FUNCTION
+// ================= NAVBAR + USER =================
 function login() {
     const username = document.getElementById("username").value;
 
@@ -19,29 +11,26 @@ function login() {
     showUser();
 }
 
-// LOGOUT FUNCTION
 function logout() {
     localStorage.removeItem("user");
     location.reload();
 }
 
-// SHOW USER IF LOGGED IN
 function showUser() {
     const user = localStorage.getItem("user");
 
     if (user) {
-        document.getElementById("loginBox").style.display = "none";
-        document.getElementById("userBox").style.display = "block";
-        document.getElementById("userNameDisplay").innerText = user;
+        const loginBox = document.getElementById("loginBox");
+        const userBox = document.getElementById("userBox");
+
+        if (loginBox) loginBox.style.display = "none";
+        if (userBox) userBox.style.display = "block";
+
+        const nameDisplay = document.getElementById("userNameDisplay");
+        if (nameDisplay) nameDisplay.innerText = user;
     }
 }
 
-// RUN WHEN PAGE LOADS
-window.onload = function () {
-    showUser();
-};
-
-// UPDATE NAVBAR NAME
 function updateNavbar() {
     const user = localStorage.getItem("user");
     const link = document.getElementById("accountLink");
@@ -51,15 +40,16 @@ function updateNavbar() {
     }
 }
 
-// RUN ON LOAD
 window.onload = function () {
     showUser();
     updateNavbar();
 };
 
+// ================= SUBSCRIPTION =================
 function selectPlan(plan) {
     localStorage.setItem("selectedPlan", plan);
-    document.getElementById("selectedPlanText").innerText = "You selected: " + plan;
+    const text = document.getElementById("selectedPlanText");
+    if (text) text.innerText = "You selected: " + plan;
     openPopup();
 }
 
@@ -67,20 +57,23 @@ function confirmPayment() {
     const plan = localStorage.getItem("selectedPlan");
     localStorage.setItem("userPlan", plan);
 
-    alert("Payment successful for " + plan + " 🎉");
+    alert("✅ Payment successful for " + plan + " 🎉");
 
     closePopup();
     location.href = "account.html";
 }
 
 function openPopup() {
-    document.getElementById("popup").style.display = "flex";
+    const popup = document.getElementById("popup");
+    if (popup) popup.style.display = "flex";
 }
 
 function closePopup() {
-    document.getElementById("popup").style.display = "none";
+    const popup = document.getElementById("popup");
+    if (popup) popup.style.display = "none";
 }
 
+// ================= MEAL SELECTION =================
 let selectedMeals = [];
 
 function selectMeal(mealName, element) {
@@ -100,27 +93,63 @@ function goToSubscription() {
         alert("Select at least one meal");
         return;
     }
-
     location.href = "subscription.html";
 }
 
-document.getElementById('checkoutBtn').addEventListener('click', () => {
-    const location = document.getElementById('locationInput').value.trim();
-    if(selectedMeals.length === 0){
-        showToast("Please select at least one meal!");
-        return;
-    }
-    if(location === "") {
-        showToast("Please enter your delivery location!");
-        return;
-    }
-    let summary = selectedMeals.map(m => BWP{m.name} (BWP {m.price})`).join(", ");
-    let total = selectedMeals.reduce((sum, m) => sum + m.price, 0);
-    showToast(`✅ Your order: BWP{summary}. Total BWP {total}. We’ll deliver to BWP{location} in a few minutes. Pay on delivery!`);
+// ================= TOAST =================
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    if (!toast) return;
 
-    // Clear selection for new orders
-    selectedMeals = [];
-    mealItems.forEach(item => item.classList.remove('selected'));
-    updateTotal();
-    document.getElementById('locationInput').value = "";
-});
+    toast.textContent = message;
+    toast.className = "show";
+
+    setTimeout(() => {
+        toast.className = toast.className.replace("show", "");
+    }, 4000);
+}
+
+// ================= ONE-TIME ORDER + WHATSAPP =================
+const checkoutBtn = document.getElementById('checkoutBtn');
+
+if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+
+        const locationInput = document.getElementById('locationInput');
+        const location = locationInput ? locationInput.value.trim() : "";
+
+        if (selectedMeals.length === 0) {
+            showToast("Please select at least one meal!");
+            return;
+        }
+
+        if (location === "") {
+            showToast("Enter your delivery location!");
+            return;
+        }
+
+        // Build order summary
+        let summary = selectedMeals.join(", ");
+
+        // WhatsApp number (CHANGE THIS TO YOUR NUMBER)
+        let phoneNumber = "26778733506"; 
+
+        let message = `Hello Uni-Eats! I would like to order: ${summary}. Deliver to: ${location}. I will pay on delivery.`;
+
+        let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp
+        window.open(whatsappURL, "_blank");
+
+        // Show confirmation toast
+        showToast(`✅ Order placed! Food coming to ${location} in a few minutes. Pay on delivery.`);
+
+        // Reset
+        selectedMeals = [];
+        locationInput.value = "";
+
+        document.querySelectorAll(".meal-item").forEach(item => {
+            item.classList.remove("selected");
+        });
+    });
+}
