@@ -22,67 +22,72 @@
 <!-- HERO -->
 <section class="hero">
     <h1>Our Meals</h1>
-    <p>Explore our delicious options</p>
+    <p>Click meals to select your favorites</p>
 </section>
 
 <!-- MEALS GRID -->
 <section class="meal-grid">
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Burger & Chips', this)">
         <img src="burger and chips.jpg" alt="Burger and Chips">
         <h3>Burger & Chips</h3>
         <p>Crispy, juicy, and perfectly seasoned.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Hotdog', this)">
         <img src="hotdog.jpg" alt="Hotdog">
         <h3>Hotdog</h3>
         <p>A classic favorite, fresh and delicious.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Kota', this)">
         <img src="kota.jpg" alt="Kota">
         <h3>Kota</h3>
         <p>Local flavor packed into every bite.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Macaroni', this)">
         <img src="macaroni.jpg" alt="Macaroni">
         <h3>Macaroni</h3>
         <p>Cheesy, creamy, and cooked to perfection.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Rice Dish', this)">
         <img src="rice.jpg" alt="Rice Dish">
         <h3>Rice Dish</h3>
         <p>Warm, comforting, and full of flavor.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Spaghetti', this)">
         <img src="spaghetti.jpg" alt="Spaghetti">
         <h3>Spaghetti</h3>
         <p>Rich sauce and perfectly cooked pasta.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Sorghum Porridge with Beef', this)">
         <img src="Sorghum Porridge with Beef.jfif" alt="Sorghum Porridge with Beef">
         <h3>Sorghum Porridge with Beef</h3>
         <p>A hearty, traditional favorite.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Coca-Cola', this)">
         <img src="coke.jpg" alt="Coca-Cola">
         <h3>Coca-Cola</h3>
         <p>Refreshing and ice-cold.</p>
     </div>
 
-    <div class="meal-item">
+    <div class="meal-item" onclick="selectMeal('Fanta', this)">
         <img src="fanta.jpg" alt="Fanta">
         <h3>Fanta</h3>
         <p>Bright, fruity, and full of flavor.</p>
     </div>
 
 </section>
+
+<!-- CONTINUE BUTTON -->
+<div style="text-align:center; margin:40px;">
+    <button class="btn" onclick="goToSubscription()">Continue to Subscription</button>
+</div>
 
 <!-- PLAN INFO -->
 <section class="plans-info">
@@ -93,19 +98,19 @@
 
         <div class="feature">
             <h3>Weekly Plan</h3>
-            <p> 5 meals per week</p>
+            <p>5 meals per week</p>
             <p>Includes burgers, pasta, rice, and more</p>
         </div>
 
         <div class="feature">
             <h3>Monthly Plan</h3>
-            <p> 20 meals per month</p>
+            <p>20 meals per month</p>
             <p>Best value for regular customers</p>
         </div>
 
         <div class="feature">
             <h3>Student Plan</h3>
-            <p> 3 meals per week</p>
+            <p>3 meals per week</p>
             <p>Affordable and convenient</p>
         </div>
 
