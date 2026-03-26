@@ -21,19 +21,20 @@
 <section class="hero">
     <h1>Account</h1>
 
-    <!-- LOGIN FORM -->
-    <div id="loginBox">
-        <input type="text" id="username" placeholder="Enter your name">
-        <button class="btn" onclick="login()">Login</button>
-    </div>
-
-    <!-- USER INFO -->
+    <!-- USER INFO (HIDDEN BY DEFAULT) -->
     <div id="userBox" style="display:none;">
         <h2>Welcome, <span id="userNameDisplay"></span> 👋</h2>
         <button class="btn" onclick="logout()">Logout</button>
     </div>
+
+    <!-- LOGIN BOX -->
+    <div class="account-box" id="loginBox">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button class="btn" onclick="login()">Login</button>
+    </div>
+
 </section>
 
-</body>
 <script src="main.js"></script>
+</body>
 </html>
